@@ -36,7 +36,7 @@ nato_dict = {row.letter: row.code for index, row in df.iterrows()}
 # TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 user_input = input('Enter a word:').upper()
 list_of_letters = [letter for letter in user_input]
-print(list_of_letters)
+len(list_of_letters)
 
-nato_translation_list = [row.code for index, row in df.iterrows() if row.letter in list_of_letters]
+nato_translation_list = [nato_dict[letter] for letter in list_of_letters]
 print(nato_translation_list)
